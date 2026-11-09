@@ -1,0 +1,7 @@
+Komari is upstream software by komari-monitor.
+Upstream repository: https://github.com/komari-monitor/komari
+See legacy/main_original for a full upstream source tree snapshot previously held on main,
+and the upstream LICENSE/NOTICE there.
+
+This main branch archives LastDream's live deployment customizations (theme/deploy)
+against the official 1.6.0 binary.

@@ -1,0 +1,25 @@
+[Unit]
+Description=Komari native monitoring dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=komari
+Group=komari
+WorkingDirectory=/opt/komari
+ExecStart=/opt/komari/komari server --listen localhost:25774
+Restart=on-failure
+RestartSec=5
+Environment=GOMEMLIMIT=120MiB
+Environment=GOGC=75
+MemoryHigh=160M
+MemoryMax=200M
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/komari/data /opt/komari/cache
+
+[Install]
+WantedBy=multi-user.target

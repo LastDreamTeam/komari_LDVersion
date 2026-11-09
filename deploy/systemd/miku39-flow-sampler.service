@@ -1,0 +1,12 @@
+[Unit]
+Description=Miku39 globe flow sampler (数据收发)
+After=network-online.target
+
+[Service]
+Type=oneshot
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+Environment=MIKU39_FLOW_ROOT=/opt/miku39-flow
+Environment=MIKU39_FLOWS_OUT=/opt/komari/data/theme/miku39/dist/flows.json
+ExecStart=/usr/bin/flock -n /opt/miku39-flow/sampler.lock /usr/bin/python3 /opt/miku39-flow/flow-sampler.py

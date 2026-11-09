@@ -1,0 +1,25 @@
+# secrets & runtime — never commit
+**/*.pem
+**/*.key
+**/id_ed25519
+**/id_rsa
+**/hosts.json
+**/config.json
+**/token
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/flows.json
+**/flows-state.json
+**/geoip-cache.json
+**/sampler.lock
+**/__pycache__/
+**/*.pyc
+**/*.bak*
+**/*.broken*
+.env
+.env.*
+!.env.example
+cache/
+data/komari.db*
+data/metrics.db*

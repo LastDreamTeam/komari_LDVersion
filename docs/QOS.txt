@@ -1,0 +1,7 @@
+Old HK eth0 QoS (2026-11-09)
+- Removed: qdisc netem loss 1% on eth0 (was actively dropping ~1%)
+- Applied: CAKE bandwidth 800mbit diffserv3 on eth0 egress + ifb0 ingress
+- DSCP: SSH sport22=EF; nginx 80/443=AF41; xray 8443/43220/46444/37125/42267=CS1 (bulk)
+- panel.example.com stays on nginx:443 (AF41), not rate-limited separately
+- Persist: systemctl enable ld-eth0-qos.service → /usr/local/sbin/ld-eth0-qos.sh
+- komari: Nice=-5 CPUWeight=200; x-ui: Nice=5 CPUWeight=50; MemoryMax still 200M

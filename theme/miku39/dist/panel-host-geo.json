@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-11-09T00:00:00+00:00",
+  "note": "Example panel-host geo for miku39 default_destination=auto; display name is a generic hub label.",
+  "ip": "REDACTED",
+  "provider": "manual",
+  "lat": 22.3193,
+  "lng": 114.1694,
+  "name": "汇聚点",
+  "city": "Example",
+  "region": "Example",
+  "country": "HK"
+}

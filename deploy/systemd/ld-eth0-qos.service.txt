@@ -1,0 +1,28 @@
+# /etc/systemd/system/ld-eth0-qos.service
+[Unit]
+Description=LastDream eth0 CAKE QoS (protect Komari/SSH vs proxy saturation)
+After=network-online.target
+Wants=network-online.target
+Before=komari.service x-ui.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ld-eth0-qos.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+/etc/systemd/system/ld-eth0-qos.service
+[Unit]
+Description=LastDream eth0 CAKE QoS (protect Komari/SSH vs proxy saturation)
+After=network-online.target
+Wants=network-online.target
+Before=komari.service x-ui.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ld-eth0-qos.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

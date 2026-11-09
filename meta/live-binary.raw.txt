@@ -1,0 +1,14 @@
+version=1.6.0
+hash=1b76b7ad5bc3de6529bb7f0577069b4ac241fec3
+binary_path=/opt/komari/komari
+binary_sha256=81657c0f616edb64a247d9f7a1628be104e344e6cd6eec6da82d43050a3d56e5
+binary_size=34366968
+binary_mtime=2026-11-03 20:16:21.000000000 +0800
+agent_path=/opt/komari-agent/komari-agent
+agent_sha256=78c28d89e523816baea010c0ed0714f245f508ffdaca0540f5c9f230f7053c8c
+agent_size=12585218
+listen=localhost:25774
+host=example.invalid
+panel=https://panel.example.com
+{"data":{"hash":"1b76b7ad5bc3de6529bb7f0577069b4ac241fec3","version":"1.6.0"},"message":"","status":"success"}VM4268BD5AD34FF8F
+2026-11-09T17:34:55+08:00

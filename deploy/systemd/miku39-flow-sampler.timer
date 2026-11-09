@@ -1,0 +1,12 @@
+[Unit]
+Description=Run miku39 flow sampler every 30 seconds
+
+[Timer]
+OnBootSec=15s
+OnUnitInactiveSec=30s
+AccuracySec=5s
+Persistent=true
+Unit=miku39-flow-sampler.service
+
+[Install]
+WantedBy=timers.target

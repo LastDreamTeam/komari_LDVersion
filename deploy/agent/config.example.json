@@ -1,0 +1,12 @@
+{
+  "endpoint": "http://localhost:25774",
+  "token": "REPLACE_WITH_AGENT_TOKEN",
+  "interval": 5,
+  "info_report_interval": 30,
+  "disable_web_ssh": true,
+  "disable_auto_update": true,
+  "ignore_unsafe_cert": true,
+  "include_nics": "eth0",
+  "month_rotate": 1,
+  "prefer_ip_version": "4"
+}

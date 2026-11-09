@@ -1,0 +1,30 @@
+{
+  "snapshot_label": "example-host-a现役 Komari 存档",
+  "snapshot_time_asia_shanghai": "2026-11-09T17:38:51+08:00",
+  "panel_url": "https://panel.example.com",
+  "host": "example.invalid",
+  "listen": "localhost:25774",
+  "komari": {
+    "version": "1.6.0",
+    "git_hash": "1b76b7ad5bc3de6529bb7f0577069b4ac241fec3",
+    "upstream_tag": "1.6.0",
+    "upstream_commit": "https://github.com/komari-monitor/komari/commit/1b76b7ad5bc3de6529bb7f0577069b4ac241fec3",
+    "upstream_release": "https://github.com/komari-monitor/komari/releases/tag/1.6.0",
+    "binary_path_on_host": "/opt/komari/komari",
+    "binary_sha256": "81657c0f616edb64a247d9f7a1628be104e344e6cd6eec6da82d43050a3d56e5",
+    "binary_size_bytes": 34366968,
+    "note": "线上仅有官方编译二进制，无私有 fork 源码增量；二进制不入库，按官方 release 重建。"
+  },
+  "agent": {
+    "binary_path_on_host": "/opt/komari-agent/komari-agent",
+    "binary_sha256": "78c28d89e523816baea010c0ed0714f245f508ffdaca0540f5c9f230f7053c8c",
+    "binary_size_bytes": 12585218
+  },
+  "theme": {
+    "name": "miku39",
+    "path_on_host": "/opt/komari/data/theme/miku39"
+  },
+  "legacy_branch": "legacy/main_original",
+  "legacy_sha": "62af91037924057b961dff7b93beacd3f76a81e8",
+  "legacy_note": "归档前 default main（fork 自 komari-monitor/komari 的完整上游源码树）"
+}

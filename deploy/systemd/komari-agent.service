@@ -1,0 +1,28 @@
+[Unit]
+Description=Komari native monitoring agent (monitor only)
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+[Service]
+User=komari-agent
+Group=komari-agent
+WorkingDirectory=/opt/komari-agent/data
+ExecStart=/opt/komari-agent/komari-agent --config /opt/komari-agent/config.json
+Restart=on-failure
+RestartSec=10
+#Environment=SSL_CERT_FILE=/opt/komari-agent/ca.pem
+Environment=GOMEMLIMIT=24MiB
+Environment=GOGC=50
+MemoryHigh=48M
+MemoryMax=80M
+CPUQuota=20%
+Nice=10
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/komari-agent/data
+[Install]
+WantedBy=multi-user.target
