@@ -1,5 +1,5 @@
 {
-  "snapshot_label": "example-host-a现役 Komari 存档",
+  "snapshot_label": "Komari + miku39 LD theme/deploy archive",
   "snapshot_time_asia_shanghai": "2026-11-09T17:38:51+08:00",
   "panel_url": "https://panel.example.com",
   "host": "panel.example.com",
@@ -13,7 +13,7 @@
     "binary_path_on_host": "/opt/komari/komari",
     "binary_sha256": "81657c0f616edb64a247d9f7a1628be104e344e6cd6eec6da82d43050a3d56e5",
     "binary_size_bytes": 34366968,
-    "note": "线上仅有官方编译二进制，无私有 fork 源码增量；二进制不入库，按官方 release 重建。"
+    "note": "Archive assumes official release binary only; no private Go fork diff. Binary not shipped; rebuild from upstream release."
   },
   "agent": {
     "binary_path_on_host": "/opt/komari-agent/komari-agent",
@@ -26,5 +26,5 @@
   },
   "legacy_branch": "legacy/main_original",
   "legacy_sha": "62af91037924057b961dff7b93beacd3f76a81e8",
-  "legacy_note": "归档前 default main（fork 自 komari-monitor/komari 的完整上游源码树）"
+  "legacy_note": "Previous default main: full upstream source tree forked from komari-monitor/komari"
 }
