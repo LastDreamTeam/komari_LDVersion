@@ -37,14 +37,8 @@ GEO_MIN_INTERVAL = 1.2  # polite to public GeoIP
 SS_CMD = "ss -Htn state established; echo '---LISTEN---'; ss -Htnl"
 
 PREFAB_GEO = {
-    # Public DNS / CDN anchors only. Fleet host coords come from hosts.json
-    # (lat/lng/ips per entry), not from this dict — do not hardcode fleet IPs here.
-    "example.invalid": (37.7749, -122.4194, "Cloudflare", "US"),
-    "example.invalid": (37.7749, -122.4194, "Cloudflare", "US"),
-    "example.invalid": (37.4056, -122.0775, "Google DNS", "US"),
-    "example.invalid": (37.4056, -122.0775, "Google DNS", "US"),
-    "example.invalid": (38.9072, -77.0369, "Quad9", "US"),
-    "example.invalid": (37.7749, -122.4194, "OpenDNS", "US"),
+    # Intentionally empty: do not hardcode any address literals here.
+    # Fleet / peer coordinates come from hosts.json (lat/lng/ips per entry).
 }
 
 # /8-ish prefab by first octet ranges for coarse fallback (optional later)
@@ -52,7 +46,7 @@ SS_LINE = re.compile(
     r"^(?:\S+\s+){3}(\S+):(\d+)\s+(\S+):(\d+)\s*$"
 )
 # ss -Htn may look like: Recv-Q Send-Q Local Address:Port Peer Address:Port
-# With -H: no header. Format often: 0 0 example.invalid:443 example.invalid:12345
+# With -H: no header. Format often: Recv-Q Send-Q Local:port Peer:port
 
 
 def utc_now() -> datetime:
@@ -116,14 +110,14 @@ def parse_ss(text: str):
             if t.startswith("users:("):
                 break
             if ":" in t:
-                # IPv6 [::1]:443 or example.invalid:80
+                # bracketed IPv6 host:port or dotted IPv4 host:port
                 addrs.append(t)
         if len(addrs) < 2:
             continue
         local, peer = addrs[-2], addrs[-1]
 
         def split_ap(ap: str):
-            # listen Peer can be example.invalid:* / [::]:* / *
+            # listen Peer can be wildcard any-address / *
             if ap in ("*", "*:*"):
                 return "*", 0
             if ap.startswith("["):

@@ -8,7 +8,7 @@ agent_path=/opt/komari-agent/komari-agent
 agent_sha256=78c28d89e523816baea010c0ed0714f245f508ffdaca0540f5c9f230f7053c8c
 agent_size=12585218
 listen=localhost:25774
-host=example.invalid
+host=panel.example.com
 panel=https://panel.example.com
 {"data":{"hash":"1b76b7ad5bc3de6529bb7f0577069b4ac241fec3","version":"1.6.0"},"message":"","status":"success"}VM4268BD5AD34FF8F
 2026-11-09T17:34:55+08:00

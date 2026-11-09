@@ -2,7 +2,7 @@
   "snapshot_label": "example-host-a现役 Komari 存档",
   "snapshot_time_asia_shanghai": "2026-11-09T17:38:51+08:00",
   "panel_url": "https://panel.example.com",
-  "host": "example.invalid",
+  "host": "panel.example.com",
   "listen": "localhost:25774",
   "komari": {
     "version": "1.6.0",

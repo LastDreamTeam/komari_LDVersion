@@ -561,7 +561,7 @@ function stopFlowPolling(){if(accelState.timer){clearInterval(accelState.timer);
 function startFlowPolling(){if(accelState.timer||globeMode!=='accel')return;accelState.timer=setInterval(()=>{if(globeMode==='accel')ensureFlowData(true);},15000);}
 function demoFlowPayload(){
   const located=state.nodes.map(n=>({node:n,location:window.MikuRegions.nodeLocation(n)})).filter(x=>x.location).slice(0,6);
-  const peers=[{lat:37.77,lng:-122.42,label:'旧金山',ip:'example.invalid'},{lat:51.51,lng:-0.13,label:'伦敦',ip:'example.invalid'},{lat:1.35,lng:103.82,label:'新加坡',ip:'example.invalid'}];
+  const peers=[{lat:37.77,lng:-122.42,label:'旧金山',ip:'demo-sfo'},{lat:51.51,lng:-0.13,label:'伦敦',ip:'demo-lon'},{lat:1.35,lng:103.82,label:'新加坡',ip:'demo-sin'}];
   const flows=[];const now=new Date().toISOString();
   located.forEach((x,i)=>{const p=peers[i%peers.length],dir=i%2?'in':'out';flows.push({id:`demo-${x.node.uuid}-${dir}-${p.ip}`,dir,host_uuid:x.node.uuid,host_name:globeName(x.node),host_lat:x.location.lat,host_lng:x.location.lng,peer_ip:p.ip,peer_lat:p.lat,peer_lng:p.lng,peer_label:p.label,last_seen:now});});
   return {updated_at:now,ttl_sec:60,flow_count:flows.length,flows};

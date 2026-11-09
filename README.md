@@ -29,7 +29,7 @@ LastDream 对 [komari-monitor/komari](https://github.com/komari-monitor/komari) 
 ## 现役快照
 
 - 时间：**2026-11-09 17:38 CST**（截图另见下方，可能略晚）
-- 主机：example-host-a `example.invalid` · 入口 https://panel.example.com
+- 主机：example-host-a · 入口 https://panel.example.com
 - Komari **1.6.0** / git `1b76b7ad5bc3de6529bb7f0577069b4ac241fec3` = 官方 tag [1.6.0](https://github.com/komari-monitor/komari/releases/tag/1.6.0)
 - 主题短名 `miku39`，`komari-theme.json` version 以树内为准（现役约 1.4.x LD 改版）
 
